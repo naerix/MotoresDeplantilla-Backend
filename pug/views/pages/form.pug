@@ -1,0 +1,27 @@
+extends layouts/main-layout.pug
+
+block content
+  h1(class="title") #{ title }
+
+  form(action="/form", method="POST", class="d-flex align-items-center flex-column",
+        style="height: 100vh")
+    div(class="mb-3")
+      input(type="text" 
+          id="exampleFormControlInput1" 
+          placeholder="Producto"
+          name="name")
+    div(class="mb-3")
+      input(type="text" 
+          id="exampleFormControlInput1" 
+          placeholder="Precio"
+          name="price")
+    div(class="mb-3")
+      input(type="text" 
+          id="exampleFormControlInput1" 
+          placeholder="URL de imagen"
+          name="thumbnail")
+    div(class="mb-3")
+      div( class="button-container" )
+          button( type="submit" class="btn btn-secondary") Subir producto
+
+

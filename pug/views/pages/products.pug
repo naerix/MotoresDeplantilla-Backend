@@ -1,0 +1,28 @@
+extends layouts/main-layout.pug
+
+block content
+  h1(class="title") #{ title }
+  if productsExist
+    div( class="row justify-content-center")
+      div( class="col-auto")
+
+        table( class="table align-content-center")
+          thead
+            tr
+              th( scope="col") ID
+              th( scope="col") Producto
+              th( scope="col") Precio
+              th( scope="col") Imagen
+          
+            tbody
+              for item in products
+                        tr
+                            td #{item.id}
+                            td #{item.name}
+                            td $ #{item.price}
+                            td 
+                              img(class='product-img', src=item.thumbnail)
+  else
+    br
+    br
+    h1(class="title") No hay productos todavía

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+  <%- include('../partials/navbar'); %>
+  <div class="title"><%=title %></div>
+  <% if(productsExist){ %>
+  <div class="row justify-content-center">
+    <div class="col-auto">
+  <table class="table align-content-center">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Imagen</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <% products.forEach((item)=>{ %>
+        <tr>
+          <td><%=item.id%></th>
+          <td><%=item.name%></td>
+          <td><%=item.price%></td>
+          <td><img class="product-img" src="<%=item.thumbnail %>" /></td>
+        </tr>
+
+        <% }) %>
+  
+</tbody>
+</table>
+<% } else { %>
+  <br>
+  <br>
+  <br>
+  <h1 class="title"> Todavia no hay productos</h1>
+  <% } %>
+      </div>
+    </div>
+
+
+  <%- include('../partials/footer'); %>
+</body>
+
+</html>

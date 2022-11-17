@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+  <%- include('../partials/navbar'); %>
+
+  <div class="title">
+  <%=title %>
+  </div>
+  <br>
+  <form
+      action="/form"
+      method="POST"
+      class="d-flex align-items-center flex-column"
+      style="height: 100vh"
+    >
+
+        <div class="mb-3">
+          <input type="text" 
+          id="exampleFormControlInput1" 
+          placeholder="Producto"
+          name="name">
+        </div>
+
+
+      <div class="mb-3">
+        <input 
+          type="text" 
+          id="exampleFormControlInput1" 
+          placeholder="Precio"
+          name="price">
+      </div>
+      <div class="mb-3">
+        <input type="text" 
+          id="exampleFormControlInput1" 
+          placeholder="URL de imagen"
+          name="thumbnail">
+      </div>
+      <button type="submit" class="btn btn-secondary">Subir producto</button>
+    </form>
+
+  <%- include('../partials/footer'); %>
+</body>
+
+</html>
